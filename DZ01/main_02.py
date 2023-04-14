@@ -2,9 +2,10 @@
 # 123 -> 6 (1 + 2 + 3)
 # 100 -> 1 (1 + 0 + 0)
 
-number = 123
-sum_of_digits = 0
-while number > 0:
-    sum_of_digits += number % 10
-    number //= 10
-print(sum_of_digits)
+n = int(input("Введите трехзначное число= "))
+sum = 0
+while n > 0:
+    a = n % 10
+    sum += a
+    n //= 10
+print("Сумма трёхзначного числа = ", sum)
