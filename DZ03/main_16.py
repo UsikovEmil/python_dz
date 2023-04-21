@@ -8,22 +8,17 @@
 # 3
 # -> 1
 
-# import random
-
-# m = [random.randint(0, 10) for _ in range(5)]
-# print(m)
-
-# n = int(input("Массив от 1 до = "))
-n = 5
+n = int(input("Введите длинну массива = "))
 m = [0] * n
 count = 0
 for i in range(n):
-    m[i] = int(input("Введите число в массив "))
+    print("Введите", i+1, "число в массив =", end=" ")
+    m[i] = int(input())
 print(m)
 
 f = int(input("Какой число ищем? = "))
 
 for j in range(n):
-    if m[j] == f: 
-        count +=1
-print("Количество симолов в массиве = ",count)
+    if m[j] == f:
+        count += 1
+print("Количество симолов в массиве =", count)
