@@ -4,3 +4,15 @@
 
 # A = 3; B = 5 -> 243 (3⁵)
 # A = 2; B = 3 -> 8
+
+def st(A, B):
+    if B == 0:
+        return 1
+    elif B % 2 == 0:
+        return st(A, B // 2) ** 2
+    else:
+        return A * st(A, B - 1)
+
+a = int(input("Введите число = "))
+b = int(input("Введите степень = "))    
+print("Число в степени =",st(a,b))
