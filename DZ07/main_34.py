@@ -12,3 +12,10 @@
 
 # **Ввод:** пара-ра-рам рам-пам-папам па-ра-па-да    
 #     **Вывод:** Парам пам-пам  
+
+poem = 'пара-ра-рам рам-пам-папам па-ра-па-да'
+
+buk = 'аеёиоуыэюя'
+str = poem.split()
+slg = [sum([word.count(v) for v in buk]) for line in str for word in line.split('-')]
+print('Пам парам' if len(set(slg)) == 1 else 'Парам пам-пам')
