@@ -12,7 +12,5 @@ random.shuffle(lst)
 data = pd.DataFrame({'whoAmI':lst})
 
 OneHot = pd.DataFrame(0, index=data.index, columns=data['whoAmI'].unique(), dtype=int)
-
 OneHot = OneHot.assign(**{col: (data['whoAmI'] == col).astype(int) for col in OneHot.columns})
-
 print(OneHot)
